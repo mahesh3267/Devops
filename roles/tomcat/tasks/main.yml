@@ -1,0 +1,39 @@
+---
+# tasks file for openjdk8
+
+- name: install required packages
+  yum: name=unzip state=present
+
+- name: Download Adopt openjdk 
+  get_url: url=https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u242-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u242b08.tar.gz dest=/opt/openjdk8.tar.gz checksum="sha256:f39b523c724d0e0047d238eb2bb17a9565a60574cf651206c867ee5fc000ab43"
+
+- name: Create folder /opt/openjdk
+  file: path=/opt/openjdk state=directory
+
+- name: Extract openjdk
+  unarchive: src=/opt/openjdk8.tar.gz dest=/opt/openjdk remote_src=yes
+
+- name: create an empty file
+  file: path=/etc/profile.d/setjava.sh state=touch
+
+- name: Set JAVA_HOME
+  lineinfile: dest=/etc/profile.d/setjava.sh state=present regexp='^JAVA_HOME' line='export JAVA_HOME=/opt/openjdk/jdk8u242-b08'
+
+- name: Download the Tomcat
+  get_url: url=http://www.mirrorservice.org/sites/ftp.apache.org/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.tar.gz dest=/opt/tomcat.tar.gz checksum="sha512:75045ce54ad1b6ea66fd112e8b2ffa32a0740c018ab9392c7217a6dd6b829e8645b6810ab4b28dd186c12ce6045c1eb18ed19743c5d4b22c9e613e76294f22f5"
+
+- name: extract tomcat archive
+  unarchive: src=/opt/tomcat.tar.gz dest=/opt/ remote_src=yes
+  notify: service_restart
+
+- name: create tomcat service
+  template: src=tomcat.service.j2 dest=/etc/systemd/system/tomcat.service
+  register: service_file
+  notify: service_restart
+
+- name: daemon_reload
+  systemd: daemon_reload=yes
+  when: service_file.changed
+
+- name: enable service
+  systemd: name=tomcat state=started enabled=yes

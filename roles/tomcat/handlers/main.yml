@@ -1,0 +1,4 @@
+---
+# handlers file for openjdk8
+- name: service_restart
+  systemd: name=tomcat state=restarted

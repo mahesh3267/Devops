@@ -1,0 +1,4 @@
+---
+# vars file for openjdk8
+JAVA_HOME: /opt/openjdk/jdk8u242-b08
+CATALINA_HOME: /opt/apache-tomcat-9.0.31
