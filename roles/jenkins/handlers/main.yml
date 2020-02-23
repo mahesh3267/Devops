@@ -1,0 +1,4 @@
+---
+# handlers file for jenkins
+- name: restart_jenkins
+  systemd: name=jenkins state=restarted

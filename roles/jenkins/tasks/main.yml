@@ -1,0 +1,17 @@
+---
+# tasks file for jenkins
+- name: install openjdk8 
+  yum: name=java-1.8.0-openjdk-devel state=present
+
+- name: get the jenkins yum repo to server
+  get_url: url=https://pkg.jenkins.io/redhat/jenkins.repo dest=/etc/yum.repos.d/jenkins.repo
+
+- name: import rpm key
+  rpm_key: key=https://pkg.jenkins.io/redhat/jenkins.io.key state=present
+
+- name: install jenkins software
+  yum: name=jenkins state=present
+  notify: restart_jenkins
+
+- name: enable and start the service
+  systemd: name=jenkins enabled=yes state=started
