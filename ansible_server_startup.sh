@@ -10,6 +10,10 @@ echo "TASK: Install EPEL Repository"
 yum install epel-release -y
 yum install ansible -y
 
+echo "TASK: Enable the password less authentication"
+sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+systemctl reload sshd
+
 echo "TASK: Generate and Copy the SSH KEY to Agent"
 yum install sshpass -y
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
