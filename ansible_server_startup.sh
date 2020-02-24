@@ -18,6 +18,7 @@ echo "TASK: Generate and Copy the SSH KEY to Agent"
 yum install sshpass -y
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 sshpass -p "vagrant" ssh-copy-id -o StrictHostKeyChecking=no vagrant@ansible-agent
+sshpass -p "vagrant" ssh-copy-id -o StrictHostKeyChecking=no vagrant@ansible-server
 
 echo "TASK: Ammend the ansible Config"
 cat >> ~/.ansible.cfg<<EOF
@@ -27,4 +28,5 @@ EOF
 
 echo "TASK: Execute Ansible Simple Playbook"
 ansible-playbook -i /vagrant/hosts /vagrant/playbook.yml
+ansible-playbook -i /vagrant/hosts /vagrant/jenkins.yml
 
