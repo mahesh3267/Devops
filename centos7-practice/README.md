@@ -23,7 +23,7 @@ vagrant status
 ```
 vagrant.exe ssh centos7-practice
 ```
-**Default user will be vagrant - use sudo or change to root for administrator commands
+**Default user will be vagrant - use sudo or change to root for administrator commands**
 ```
 [vagrant@centor7-practice ~]$ sudo systemctl status docker
 ● docker.service - Docker Application Container Engine
