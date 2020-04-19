@@ -36,7 +36,7 @@ Will recommend the following pdfs
 * top
 * ifconfig or ip addr
 
-
+### USE centos7-practice folder to create Linux virtual machine 
 
 
 
