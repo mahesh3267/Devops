@@ -73,5 +73,5 @@ Hint: Some lines were ellipsized, use -l to show in full.
 ```
 **Delete the VM or VM's from running or delete**
 ```
-vagrant destroy
+vagrant destroy centos7-practice
 ```
