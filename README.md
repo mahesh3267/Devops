@@ -40,34 +40,36 @@ Will recommend the following pdfs
 
 ## DOCKER
 ### INSTALLATION
-#### UNDERSTANDING IMAGE
-#### BUILD AN IMAGE
-#### CUSTOMIZING THE CONFIG
-#### REGISTRY
-#### CONTAINER
-#### NETWORKING
-#### VOLUMES
-#### Dockerfile
-#### DEBUG THE APPLICATION
+* UNDERSTANDING IMAGE
+* BUILD AN IMAGE
+* CUSTOMIZING THE CONFIG
+* REGISTRY
+* CONTAINER
+* NETWORKING
+* VOLUMES
+* Dockerfile
+* DEBUG THE APPLICATION
 
 More Understanding: https://docs.docker.com/get-started/
 
 ## JENKINS 
 
 ### INSTALLATION
-#### Creating JOB
-#### Understanding Plugin
-#### Creating Pipeline
-#### Understanding Pipeline as a Code
+* Creating JOB
+* Understanding Plugin
+* Creating Pipeline
+* Understanding Pipeline as a Code
 
 More Understanding: https://jenkins.io/user-handbook.pdf
 
 ## AWS
 
 ### ACCOUNT CREATION
-#### VPC
-#### SUBNET
-#### INTERNET Gateway
-#### EC2
-#### EBS Volumes
-#### Elastic IP
+* VPC
+* SUBNET
+* INTERNET Gateway
+* EC2
+* EBS Volumes
+* Elastic IP
+* Security Groups
+* ELB
