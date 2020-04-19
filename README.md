@@ -1,4 +1,4 @@
-# Devops
+# Devops with Linux
 
 ## Required Tools for Local Practice
 
