@@ -38,6 +38,24 @@ Will recommend the following pdfs
 
 ### USE centos7-practice folder to create Linux virtual machine 
 
+## JAVA
+### INSTALLATION
+* Create SIMPLE JAVA PROJECT
+* IDE for JAVA Like eclipse or intellij or netbeans or jdeveloper or VisualStudio
+
+## BUILD TOOL ANT/MAVEN/GRADLE
+### INSTALLATION
+* UNDERSTANDING Build tools with SAMPLE PROJECT 
+* COMPILE/TEST/PACKAGE the APPLICATION (BUILD)
+* SEND Notification for Failures
+* Store the Packages to Central Location
+
+## APPLICATION Server for JAVA TOMCAT/JBOSS/Glassfish
+### INSTALLATION
+* UNDERSTANDING on application server like STOP/START and CONFIG
+* Deploy the Generated Application 
+* Test the Application 
+
 ## DOCKER
 ### INSTALLATION
 * UNDERSTANDING IMAGE
