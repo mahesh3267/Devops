@@ -66,6 +66,7 @@ Will recommend the following pdfs
 * NETWORKING
 * VOLUMES
 * Dockerfile
+* docker-compose
 * DEBUG THE APPLICATION
 
 More Understanding: https://docs.docker.com/get-started/
