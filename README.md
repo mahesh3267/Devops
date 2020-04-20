@@ -53,7 +53,7 @@ Will recommend the following pdfs
 ## APPLICATION Server for JAVA TOMCAT/JBOSS/Glassfish
 ### INSTALLATION
 * UNDERSTANDING on application server like STOP/START and CONFIG
-* Deploy the Generated Application 
+* Deploy the SAMPLE PROJECT
 * Test the Application 
 
 ## DOCKER
