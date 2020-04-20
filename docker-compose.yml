@@ -1,28 +1,28 @@
-version: '3.3'					## FILE FORMAT VERSION
+version: '3.3'			## FILE FORMAT VERSION
 
 services:
-   db:							## SERVICE NAME
-     image: mysql:5.7			## DOCKER IMAGE NAME WITH TAG
-     volumes:					## VOLUME FOR MYSSQL DATA ( TO PERSIST THE DATA )
+   db:				## SERVICE NAME
+     image: mysql:5.7		## DOCKER IMAGE NAME WITH TAG
+     volumes:			## VOLUME FOR MYSSQL DATA ( TO PERSIST THE DATA )
        - db_data:/var/lib/mysql  
-     restart: always			## CONTAINER WILL BE RESTART WHEN SERVICE/DAEMON RESTART
-     environment:				## ENVIRONMENT VARIABLES
+     restart: always		## CONTAINER WILL BE RESTART WHEN SERVICE/DAEMON RESTART
+     environment:		## ENVIRONMENT VARIABLES
        MYSQL_ROOT_PASSWORD: somewordpress
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
        MYSQL_PASSWORD: wordpress
 
-   wordpress:					## SERVICE NAME
+   wordpress:			## SERVICE NAME
      depends_on:
-       - db						## LINKED SERVICE
+       - db			## LINKED SERVICE
      image: wordpress:latest	## DOCKER IMAGE NAME WITH TAG
-	 ports:						## PORT CONFIGURATION
-       - "8000:80"				## HOST_PORT : CONTAINER_PORT
+     ports:			## PORT CONFIGURATION
+       - "8000:80"		## HOST_PORT : CONTAINER_PORT
      restart: always			
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
        WORDPRESS_DB_NAME: wordpress
-volumes:						## VOLUMES SECTION
-    db_data: {}					## CREATE VOLUME WITH NAME db_data
+volumes:			## VOLUMES SECTION
+    db_data: {}			## CREATE VOLUME WITH NAME db_data
