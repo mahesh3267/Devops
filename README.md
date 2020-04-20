@@ -1,6 +1,6 @@
 # Devops with Linux
 
-## Required Tools for Local Practice
+## Required Tools to Practice in Local Desktop/Laptop
 
 ### Oracle Virtualbox  - Hypervisor to install multiple Virtual Machines
 Download Location: https://www.virtualbox.org/wiki/Downloads
@@ -83,11 +83,15 @@ More Understanding: https://jenkins.io/user-handbook.pdf
 ## AWS
 
 ### ACCOUNT CREATION
+* Regions
+* Availability Zones
 * VPC
-* SUBNET
+* SUBNET 
 * INTERNET Gateway
 * EC2
 * EBS Volumes
 * Elastic IP
 * Security Groups
+* AMI
 * ELB
+* IAM 
